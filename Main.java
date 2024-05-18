@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe abstrata para representar uma mensagem
 abstract class Mensagem {
     private String conteudo;
     private String horaDoEnvio;
@@ -26,7 +25,6 @@ abstract class Mensagem {
     }
 }
 
-// Classe para representar uma mensagem de texto
 class MensagemTexto extends Mensagem {
     public MensagemTexto(String conteudo, String horaDoEnvio, Contato destinatario) {
         super(conteudo, horaDoEnvio, destinatario);
@@ -36,7 +34,6 @@ class MensagemTexto extends Mensagem {
 
 
 
-// Classe para representar um contato
 class Contato {
     private String nome;
     private String numero;
@@ -55,7 +52,6 @@ class Contato {
     }
 }
 
-// Classe para representar o aplicativo Whatsapp
 class Whatsapp {
     private List<Contato> contatos;
     private List<Mensagem> mensagens;
@@ -73,7 +69,6 @@ class Whatsapp {
         mensagens.add(mensagem);
     }
 
-    // listarContatos 
     public void listarContatos() {
         for (Contato contato : contatos) {
             System.out.println("Nome: " + contato.getNome());
@@ -82,7 +77,6 @@ class Whatsapp {
     }
 
 
-    // listarMensagens
 
     public void listarMensagens() {
         for (Mensagem mensagem : mensagens) {
@@ -92,12 +86,10 @@ class Whatsapp {
         }
     }
 
-    // Outros métodos para interagir com os contatos e mensagens
 }
 
 public class Main {
     public static void main(String[] args) {
-        // Exemplo de uso
         Whatsapp whatsapp = new Whatsapp();
 
         Contato contato1 = new Contato("João", "123456789");
